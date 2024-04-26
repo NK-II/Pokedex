@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <title>Header Navigation with Checklists</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px 0;
+            background-color: #f0f0f0;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .header a {
+            text-decoration: none;
+            color: #333;
+            padding: 10px;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .header a.active::after {
+            content: "";
+            display: block;
+            height: 2px;
+            background-color: black;
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            right: 0;
+        }
+
+        .header a:hover {
+            color: #007BFF;
+        }
+
+        .container {
+            display: none; 
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-top: 10px;
+        }
+
+        .checklist-item {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="file:///C:/Users/User/AppData/Local/Temp/9cc83bc5-b34f-44fa-a475-22cf4f025369_HTML%20Codes%20(1).zip.369/HTML%20Codes/new.html#" class="option" data-target="#searchFilters">SEARCH FILTERS</a>
+        <a href="file:///C:/Users/User/AppData/Local/Temp/9cc83bc5-b34f-44fa-a475-22cf4f025369_HTML%20Codes%20(1).zip.369/HTML%20Codes/new.html#" class="option" data-target="#teamChecklist">TEAM CHECKLIST</a>
+        <a href="file:///C:/Users/User/AppData/Local/Temp/9cc83bc5-b34f-44fa-a475-22cf4f025369_HTML%20Codes%20(1).zip.369/HTML%20Codes/new.html#" class="option active" data-target="#saveTeam">SAVE/LOAD TEAM</a>
+    </div>
+
+    <div id="searchFilters" class="container" style="display: none;">
+        <div class="inputlist">
+            <input list="formats" placeholder="Format" id="format">
+                <datalist id="formats">
+                    <option value="All">
+                    </option><option value="Battle Stadium Singles">
+                    </option><option value="Uber">
+                    </option><option value="OU: Over Used">
+                    </option><option value="UU: Under Used">
+                    </option><option value="RU: Rarely Used">
+                    </option><option value="NU: Never Used">
+                    </option><option value="PU">
+                    </option><option value="ZU">
+                    </option><option value="Little Cup (LC)">
+                    </option><option value="Doubles Uber">
+                    </option><option value="Doubles OU">
+                    </option><option value="Doubles UU">
+                
+                </option></datalist>
+        </div>
+        <div class="inputlist">
+            <input list="types" placeholder="Type" id="type">
+                <datalist id="types">
+                    <option value="All">
+                    </option><option value="Bug">
+                    </option><option value="Dark">
+                    </option><option value="Dragon">
+                    </option><option value="Electric">
+                    </option><option value="Fighting">
+                    </option><option value="Fairy">
+                    </option><option value="Fire">
+                    </option><option value="Flying">
+                    </option><option value="Ghost">
+                    </option><option value="Grass">
+                    </option><option value="Ground">
+                    </option><option value="Ice">
+                    </option><option value="Normal">
+                    </option><option value="Poison">
+                    </option><option value="Psychic">
+                    </option><option value="Rock">
+                    </option><option value="Steel">
+                    </option><option value="Water">
+                
+                </option></datalist>
+        </div>
+        <div class="inputlist">
+            <input list="regions" placeholder="Region" id="region">
+                <datalist id="regions">
+                    <option value="All">
+                    </option><option value="Kanto">
+                    </option><option value="Johto">
+                    </option><option value="Hoenn">
+                    </option><option value="Sinnoh">
+                    </option><option value="Unova">
+                    </option><option value="Kalos">
+                    </option><option value="Alola">
+                    </option><option value="Galar">
+                    </option><option value="Hisui">
+                    </option><option value="Paldea">
+                
+                </option></datalist>
+        </div>
+
+        <div class="inputlist">
+            <input list="moves" placeholder="Moves" id="move">
+                <datalist id="moves">
+                    <option value="All">
+                    </option><option value="Viable">
+                
+                </option></datalist>
+        </div>
+    </div>
+
+    <div id="teamChecklist" class="container" style="display: none;">
+
+        <div class="checklist-item">
+            <h3 class="checklist-heading">General</h3>
+            <p class="checklist-text">Entry Hazard</p>
+            <p class="checklist-text">Spinner/Defogger</p>
+            <p class="checklist-text">Reliable Recovery</p>
+        </div>
+
+        <div class="checklist-item">
+            <h3 class="checklist-heading">Defensive</h3>
+            <p class="checklist-text">Cleric</p>
+            <p class="checklist-text">Status Move</p>
+            <p class="checklist-text">Phazer</p>
+        </div>
+
+        <div class="checklist-item">
+            <h3 class="checklist-heading">Offensive</h3>
+            <p class="checklist-text">Boosting Move</p>
+            <p class="checklist-text">Volt-turn Move</p>
+            <p class="checklist-text">Choice Item</p>
+        </div>
+    </div>
+
+    <div id="saveTeam" class="container" style="display: block;">
+
+        <div class="checklist-item">
+            <h3 class="checklist-heading">IMPORT/EXPORT TEAM</h3>
+        </div>
+
+        <div class="checklist-item">
+            <h3 class="checklist-heading">COPY TEAM</h3>
+        </div>
+    </div>
+
+    <script>
+        const headerOptions = document.querySelectorAll('.header a');
+        const searchFilters = document.querySelector('#searchFilters');
+        const teamChecklist = document.querySelector('#teamChecklist');
+        const saveTeam = document.querySelector('#saveTeam');
+
+        headerOptions.forEach(option => {
+            option.addEventListener('click', function(event) {
+                headerOptions.forEach(opt => opt.classList.remove('active'));
+
+                this.classList.add('active');
+
+                if (this.getAttribute('data-target') === '#searchFilters') {
+                    searchFilters.style.display = searchFilters.style.display === 'block' ? 'none' : 'block';
+                    teamChecklist.style.display = 'none';
+                    saveTeam.style.display = 'none';
+                } else if (this.getAttribute('data-target') === '#teamChecklist') {
+                    teamChecklist.style.display = teamChecklist.style.display === 'block' ? 'none' : 'block';
+                    searchFilters.style.display = 'none'; 
+                    saveTeam.style.display = 'none';
+                } else if (this.getAttribute('data-target') === '#saveTeam') {
+                    saveTeam.style.display = saveTeam.style.display === 'block' ? 'none' : 'block';
+                    searchFilters.style.display = 'none'; 
+                    teamChecklist.style.display = 'none';
+                } else {
+                    searchFilters.style.display = 'none';
+                    teamChecklist.style.display = 'none';
+                    saveTeam.style.display = 'none';
+                }
+
+                event.preventDefault();
+            });
+        });
+    </script>
+
+
+</body></html>

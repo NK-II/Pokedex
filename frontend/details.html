@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POKEMON DETAILS</title>
+    <style>
+
+        body {
+            background-image: url('./image/black_bg.jpeg');
+            background-size: cover;
+            font-family: 'Courier New', Courier, monospace, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        
+        .index-button {
+            position: absolute;
+            top: 10px; 
+            left: 10px; 
+            padding: 10px 20px; 
+            background-color: #c73809; 
+            color: black; 
+            border-radius: 5px; 
+            text-decoration: none; 
+            cursor: pointer; 
+        }
+
+        .index-button:hover {
+            background-color: #fcfcfc; 
+        }
+
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100vh;
+            padding: 20px;
+        }
+
+
+        .picture-box {
+            flex: 1; 
+            text-align: center;
+            padding: 20px;
+        }
+
+        .picture-box img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+
+        .info-boxes {
+            width: 40%; 
+            display: flex;
+            flex-direction: column;
+            gap: 10px; 
+        }
+
+  
+        .info-container {
+            padding: 15px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(126, 1, 1, 0.3);
+            color: white;
+        }
+
+        h2 {
+            margin-top: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <a href="index.html" class="index-button">Home</a>
+
+    <div class="container">
+
+        <div class="picture-box">
+            <img src="./image/mewtwo.gif" alt="screen picture">
+        </div>
+
+  
+        <div class="info-boxes">
+ 
+            <div class="info-container">
+                <h2>Details</h2>
+                <p>This Pokémon was created by genetic manipulation. It has no Pokédex entries in Sun, Moon, Ultra Sun, and Ultra Moon. Its DNA is almost the same as Mew's.</p>
+            </div>
+
+            <div class="info-container">
+                <h2>Evolution</h2>
+                <p>Next Evolution: NO Evolution</p>
+                <p>Previous Evolution: MEW</p>
+            </div>
+
+   
+            <div class="info-container">
+                <h2>Name</h2>
+                <p>MewTwo</p>
+            </div>
+
+
+            <div class="info-container">
+                <h2>Type</h2>
+                <p>Psychic</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

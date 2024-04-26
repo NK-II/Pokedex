@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register Trainer ID</title>
+  <style>
+    body {
+      background-image: url('./image/black_bg.jpeg'); 
+      background-size: cover;
+      font-family: 'Courier New', Courier, monospace, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      display: flex; 
+      justify-content: flex-end; 
+      align-items: center;
+      height: 100vh;
+    }
+
+    .picture-box {
+      flex: 1; 
+      text-align: center;
+      padding: 20px;
+    }
+
+    .picture-box img {
+      max-width: 100%; 
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .form-box {
+      max-width: 500px; 
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.7); 
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(126, 1, 1, 0.3);
+      color: white; 
+    }
+
+    h1 {
+      text-align: center;
+      color: white; 
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 95.5%; 
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white; 
+    }
+
+    input[type="submit"] {
+      width: 100%;
+      background-color: #f5f1f1;
+      color: #000000;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #eb3636;
+    }
+
+    .login-link {
+      text-align: center;
+      margin-top: 10px;
+      color: white;
+    }
+
+    .subs:hover {
+      background-color: #c60606;
+    }
+
+    .login-link a {
+      color: rgb(245, 245, 252); 
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="picture-box">
+      <img src="./image/red_trainer.jpg" alt="Your picture"> 
+    </div>
+    <div class="form-box">
+      <h1>Register Pokémon Trainer ID</h1>
+      <form action="registration.php" method="post">
+        <input type="text" name="username" placeholder="Choose Username" required>
+        <input type="password" name="password" placeholder="Create Password" required>
+        <input type="submit" name="register" value="register">
+      </form>
+      <div class="login-link">
+        Already have an account? <a class="subs" href="login.html">Sign In</a>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

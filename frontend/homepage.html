@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poke Dex Homepage</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-image: url('./image/hmpg_bg.jpg'); 
+        }
+        .box {
+            width: 100%;
+            padding: 20px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.8); 
+        }
+        
+
+    </style>
+</head>
+
+<body>
+    
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <a class="navbar-brand" href="#"><img src="./image/logo1.png" style="max-width: 40px;"/> <span class="ml-2 nav-banner">PokeDex</span> </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="homepage.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#" onclick="confirmDelete()">Delete Account</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<script>
+    function confirmDelete() {
+        var confirmed = confirm("Are you sure you want to delete your account? This action cannot be undone.");
+        
+        if (confirmed) {
+            window.location.href = "delete.php";
+        }
+    }
+</script>
+
+    <div class="container">
+        <div class="row justify-content-center align-items-center py-5">
+            <div class="banner-content text-center">
+                <h1><b>Welcome to PokeRealm!</b></h1>
+                <p>Explore the world of Pokémon with us.</p>
+            </div>
+        </div>
+
+        
+
+        <div class="row justify-content-center py-5">
+            <div class="box">
+                <h2>Pokédex</h2>
+                <p>Find all of the Pokémons here!</p>
+                <a href="pokedex.html" class="btn btn-primary">View pokédex</a>
+            </div>
+        </div>
+
+        <div class="row justify-content-center py-5">
+            <div class="box">
+                <h2>Battle Deck Builder</h2>
+                <p>Build your ultimate Pokémon battle deck.</p>
+                <a href="deck.html" class="btn btn-primary">Build Deck</a>
+            </div>
+        </div>
+
+        <div class="row justify-content-center py-5">
+            <div class="box">
+                <h2>Pokemon Stats</h2>
+                <p>Who is the strongest pokémon ?</p>
+                <div class="input-group">
+                    <a href="stats.html" class="btn btn-primary">Check Pokemon Stats</a>
+                    <a href="types.html" class="btn btn-primary">Check Pokemon Type</a>
+                    <!-- <button class="btn btn-primary" type="button">Search</button> -->
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center py-5">
+            <div class="featured-pokemon-content">
+                <h2>Featured Pokémon</h2>
+                <div class="card">
+                    <img src="./image/zr.jpeg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Greatest</h5>
+                        <p class="card-text">One of the most iconic Pokémon.</p>
+                        <a href="pokedex.html" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="container">
+                <p>&copy; 2024 PokeDex. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+</body>
+

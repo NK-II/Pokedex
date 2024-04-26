@@ -1,0 +1,37 @@
+ *{
+    font-family: 'Montserrat', sans-serif;
+ }
+
+ .nav-banner{
+     font-weight: 300 !important;
+     
+ }
+
+ .nav-item{
+     margin: 0px 15px;
+     
+ }
+
+ 
+
+ .btn{
+     border-radius: 25px !important;
+ }
+
+
+ ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+
+  h6{
+      font-weight: 700;
+      margin-top: 20px;
+  }
+
+  .card{
+      max-width: 22rem !important;
+      min-height:650px !important;
+  }
